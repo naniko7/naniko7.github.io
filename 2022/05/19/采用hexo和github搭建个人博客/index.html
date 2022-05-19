@@ -156,7 +156,6 @@
 
         <div class="article-content markdown-body">
             <p>博客内容：采用hexo和github搭建个人博客</p>
-<p>[toc]</p>
 <p>参考资料：</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60578464" >使用 Hexo+GitHub 搭建个人免费博客教程（小白向） - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a></p>
 <h1 id="1-Hexo安装"><a href="#1-Hexo安装" class="headerlink" title="1. Hexo安装"></a>1. Hexo安装</h1><ul>
@@ -226,7 +225,6 @@
 <ol>
 <li>_config.yml使用的是yaml语法，同时也支持json格式，但是json格式相较于yaml更为复杂。</li>
 <li>在模板中如“- - -”的符号改为“; ; ;”就能支持json</li>
-<li>s</li>
 </ol>
 <p><strong>layout</strong></p>
 <ol>
@@ -254,7 +252,29 @@
 <ol>
 <li>如果需要考虑使用恒定id，确保评论与文章不会映射混乱，可以使用插件hexo-abbrlink。</li>
 </ol>
-<h2 id="3-2-hexo主题使用"><a href="#3-2-hexo主题使用" class="headerlink" title="3.2 hexo主题使用"></a>3.2 hexo主题使用</h2>
+<h2 id="3-2-hexo主题使用"><a href="#3-2-hexo主题使用" class="headerlink" title="3.2 hexo主题使用"></a>3.2 hexo主题使用</h2><p>个人使用主题：Keep <a class="link"   target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html#code-copy" >配置指南 | hexo-theme-keep (xpoet.cn)<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="3-3-hexo命令"><a href="#3-3-hexo命令" class="headerlink" title="3.3 hexo命令"></a>3.3 hexo命令</h2><h2 id="3-4-实用操作"><a href="#3-4-实用操作" class="headerlink" title="3.4 实用操作"></a>3.4 实用操作</h2><p><strong>1. 插入图片</strong></p>
+<p>参考资料： Hexo官网“标签插件—–Embed image”</p>
+<ul>
+<li><p>配置.config.yml以下参数</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br><span class="line">marked:</span><br><span class="line">  prependRoot: true</span><br><span class="line">  postAsset: true</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>两种插入方式</p>
+<ul>
+<li><p>使用标签插件</p>
+<p>说明：使用标签插件是指使用</p>
+<p>图片放置位置： 将“post_asset_floder”参数设为true后，会自动生成一个同名的文件夹，将图片放在该文件夹下即可。</p>
+</li>
+<li><p>直接嵌入</p>
+<p>说明：使用markdown的一般语法，e.g <img src="/" alt=" "></p>
+<p>图片放置位置： 将“post_asset_floder”参数设为true后，会自动生成一个同名的文件夹，将图片放在该文件夹下即可。</p>
+</li>
+</ul>
+</li>
+</ul>
+
         </div>
 
         
@@ -263,6 +283,21 @@
 
         
             <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/05/19/test/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">test</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
                 
                 
                     <div class="article-next">
