@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Naniko">
+    
+    <title>
+        
+            chap2 c++ primer |
+        
+        Naniko
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo7.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/me1.svg","favicon":"/images/logo7.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"三件必要的事情：赚钱，爱自己爱朋友，搞到像齐司礼一样的小狐狸。以及我要和崔金晶长长久久。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Naniko
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">chap2 c++ primer</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/me1.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Naniko</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-05-29 15:00:57</span>
+        <span class="mobile">2022-05-29 15:00</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/c/">c++</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/c-primer/">c++ primer</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.6k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>6 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p><strong>最重要的部分为每章后的总结，需要仔细查阅</strong></p>
+<h2 id="1-C-程序各部分说明"><a href="#1-C-程序各部分说明" class="headerlink" title="1. C++程序各部分说明"></a>1. C++程序各部分说明</h2><ul>
+<li><p>注释： &#x2F;&#x2F;</p>
+</li>
+<li><p>#include ：预处理器编译指令，用于包含头文件</p>
+<ul>
+<li><pre><code class="c">#include &lt;iostream&gt;
+// 该行预处理器编译指令等同于：将iostream文件的内容取代程序中的代码行#include &lt;iostream&gt;。原文件并没有被修改，而是将源代码文件与iostream文件组合成一个复合文件
+</code></pre>
+</li>
+<li><p>程序编译时<strong>自动执行</strong></p>
+</li>
+<li><p>头文件：每个头文件支持一组工具，被包含在其他文件中，也可以称为包含文件</p>
+<ul>
+<li>以.h结尾：C++与C的旧式风格，C与C++均可以使用</li>
+<li>没有扩展名：C++可以使用</li>
+<li>以c开头：转换后的C，可以使用一些不是C的特性，如namespace</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>int main( )：函数头</p>
+<ul>
+<li>接口：这里可以理解为操作系统与之的接口</li>
+</ul>
+</li>
+<li><p>using namespace：编译指令</p>
+<ul>
+<li><p>using：编译指令</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// 该编译命令使得std名称空间中的所有名称都可以用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//如果不想包含所有的代码，只想用某个函数，只需要编译特定的需要的对象就好</span></span><br><span class="line"><span class="comment">//例如只需要使用cout对象，仅编译cout即可</span></span><br><span class="line"><span class="keyword">using</span> std::cout</span><br><span class="line"><span class="comment">// 采用以上方式后，</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>namespace</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-1-main函数"><a href="#1-1-main函数" class="headerlink" title="1.1 main函数"></a>1.1 main函数</h3><p><strong>函数 &#x3D; 函数头 + 函数体</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;this is a sentence&quot;</span>;</span><br><span class="line">    cin.<span class="built_in">get</span>();</span><br><span class="line">    cin.<span class="built_in">get</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-1-1-函数头"><a href="#1-1-1-函数头" class="headerlink" title="1.1.1 函数头"></a>1.1.1 函数头</h4><p>函数头 &#x3D; 接口</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>int：函数返回类型。描述的是从函数返回给调用它的函数的信息。</li>
+<li>main：函数名</li>
+<li>()：这里面可以填写参数，称作形参列表或参数列表（argument list或parameter list）</li>
+</ul>
+<p>函数头的书写注意事项：</p>
+<ul>
+<li>指定函数返回类型（如int，此后函数体内需要包含return 0语句），可以使用void类型，但是有些系统上不能工作，最好不用。</li>
+<li>传入的参数可以指定为void，表示无需传入参数</li>
+</ul>
+<h4 id="1-1-2-函数体"><a href="#1-1-2-函数体" class="headerlink" title="1.1.2 函数体"></a>1.1.2 函数体</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;this is a sentence&quot;</span>;</span><br><span class="line">    cin.<span class="built_in">get</span>();</span><br><span class="line">    cin.<span class="built_in">get</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>语句以分号结束，不可省略</li>
+<li>结束函数</li>
+</ul>
+<h4 id="1-1-3-main-函数要求"><a href="#1-1-3-main-函数要求" class="headerlink" title="1.1.3 main()函数要求"></a>1.1.3 main()函数要求</h4><ul>
+<li>必须有main()函数，动态链接库（DLL）除外。</li>
+<li>如果编译器到达main()函数末尾没有返回语句，默认以return 0 语句结尾。但是这种隐含的返回语句只适用于main()函数</li>
+</ul>
+<h3 id="1-2-名称空间"><a href="#1-2-名称空间" class="headerlink" title="1.2 名称空间"></a>1.2 名称空间</h3><ul>
+<li><p>头文件（包含文件）：支持一组特定的工具</p>
+<ul>
+<li>在C语言中，头文件使用扩展名h（C++中还可以用这种文件）</li>
+<li>C++头文件没有扩展名，没有h的头文件也可以包含名称空间</li>
+</ul>
+</li>
+<li><p>名称空间</p>
+<ul>
+<li><p>组织程序，防止同名的函数使用混乱（类似于事先分配好地方，每个函数在自己的地方活动）</p>
+</li>
+<li><p>以iostream为例</p>
+<ul>
+<li><p>偷懒做法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用什么写什么</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> std::cout;</span><br></pre></td></tr></table></figure>
+
+<p>此后无需使用std::cout，只需要使用cout</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-重载运算符等"><a href="#1-3-重载运算符等" class="headerlink" title="1.3 重载运算符等"></a>1.3 重载运算符等</h3><ol>
+<li><strong>什么叫重载运算符？</strong><ul>
+<li>通过重载，同一个运算符将有不同的含义。</li>
+<li>例如，&amp;既可以表示地址运算符，又能表示AND运算符</li>
+</ul>
+</li>
+<li><strong>控制符、换行符等</strong><ul>
+<li>控制符：例如endl（需要引入iostream，直接使用需要引入名称空间std）</li>
+<li>换行符</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-4-使用Vscode书写C-程序"><a href="#1-4-使用Vscode书写C-程序" class="headerlink" title="1.4 使用Vscode书写C++程序"></a>1.4 使用Vscode书写C++程序</h3><ul>
+<li>根据报错信息下载对应的插件</li>
+<li>一些符号说明<ul>
+<li>控制符”endl”<ul>
+<li>用处：重启一行</li>
+</ul>
+</li>
+<li>换行符“\n”<ul>
+<li>用处：换行</li>
+<li>是一种转义序列</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-C-语句"><a href="#2-C-语句" class="headerlink" title="2. C++语句"></a>2. C++语句</h2><p>常见的语句类型：</p>
+<ul>
+<li>声明语句（定义声明）</li>
+<li>赋值语句</li>
+</ul>
+<h3 id="2-1-语句"><a href="#2-1-语句" class="headerlink" title="2.1 语句"></a>2.1 语句</h3><p><strong>声明语句</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> carrots;</span><br></pre></td></tr></table></figure>
+
+<p>以上语句声明了一个类型为int的名为carrots的变量。</p>
+<ul>
+<li>声明语句的作用：分配内存与确定类型。</li>
+<li>C++中所有的变量都必须声明，避免在不知情情况下创建一个新的变量。</li>
+<li>在首次使用变量之前声明即可，无需在最开始声明全部变量。</li>
+</ul>
+<p><strong>赋值语句</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">carrots = <span class="number">25</span>;</span><br><span class="line"><span class="comment">//将25赋值给carrots变量</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> rabbits, apples;</span><br><span class="line">rabbits = apples = carrots;</span><br><span class="line"><span class="comment">//C++允许连续使用赋值运算符，赋值从右到左进行</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> a = <span class="number">33</span>;</span><br><span class="line"><span class="comment">//c++允许在创建变量时就对他赋值</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-函数"><a href="#2-2-函数" class="headerlink" title="2.2 函数"></a>2.2 函数</h3><ol>
+<li><p><strong>C++的函数分为两种：有返回值的和没有返回值的</strong>。</p>
+</li>
+<li><p><strong>几个概念</strong>：</p>
+</li>
+</ol>
+<ul>
+<li><p>调用函数</p>
+<ul>
+<li>最外层的接口函数</li>
+</ul>
+</li>
+<li><p>函数调用</p>
+</li>
+<li><p>被调用的函数</p>
+</li>
+</ul>
+<ol start="3">
+<li><strong>C++程序应当为程序中使用的每个函数提供原型。函数原型之于函数就像变量声明之于变量，即指出涉及的类型，在使用某个函数前，必须提供原型。</strong></li>
+</ol>
+<ul>
+<li><p>函数原型怎么提供？</p>
+<ul>
+<li>方法一：在源代码文件中输入函数原型。 </li>
+<li>方法二：包含定义了原型的头文件。</li>
+</ul>
+</li>
+<li><p>原型只描述了函数的接口，定义的时发送给函数的信息和返回的信息，不包含函数实现的代码。</p>
+</li>
+<li><p>推荐写法：</p>
+<ul>
+<li><p>在开头提供自定义函数原型</p>
+</li>
+<li><p>书写main函数</p>
+</li>
+<li><p>书写其他自定义的函数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//函数原型</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">addfunction</span><span class="params">(<span class="type">int</span>,<span class="type">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//书写main函数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> b = <span class="number">3</span>;</span><br><span class="line">    <span class="type">int</span> c;</span><br><span class="line">    c = <span class="built_in">addfunction</span>(a,b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义addfunction</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">addfunction</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> c;</span><br><span class="line">    c = a + b ;</span><br><span class="line">    <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="疑问记录及回答"><a href="#疑问记录及回答" class="headerlink" title="疑问记录及回答"></a>疑问记录及回答</h2><ol>
+<li><p>如何理解using namespace std？ 这里的std可以自定义名称吗？ std指向的代码部分是那些？ 哪些函数可用，如何查看？</p>
+<p>答：</p>
+<ul>
+<li>using namespace std是编译指令，指向std名称空间中的代码。</li>
+<li>std是专用的名称，目前尚不清楚这个命名机制，但是尝试改为using namespace ss后程序不可执行</li>
+<li></li>
+</ul>
+</li>
+<li><p>计算机对数据的存储。例如int a &#x3D; 25;对于变量a来说，在计算机中是如何存储的？</p>
+<p>答：</p>
+</li>
+<li><p>char类型可以存储什么？</p>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li><p>C与C++的异同。</p>
+<p>【Notes】</p>
+<ul>
+<li>C使用printf函数时需要指定打印类型，而C++中使用cout函数可以自主判断变量的类型选择输出。其逻辑为：</li>
+</ul>
+</li>
+<li><p>C++的特性。</p>
+<ul>
+<li>名称空间支持：编写大型程序或组合现有代码时更为容易。将某部分代码<strong>封装</strong>在一个叫做名称空间的单元中，这样就可以指定该部分代码属于什么来源。</li>
+</ul>
+</li>
+<li></li>
+</ol>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/c-primer/">#c++ primer</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/05/29/chap1-c-primer/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">chap1 c++ primer</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Naniko</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-C-%E7%A8%8B%E5%BA%8F%E5%90%84%E9%83%A8%E5%88%86%E8%AF%B4%E6%98%8E"><span class="nav-text">1. C++程序各部分说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-main%E5%87%BD%E6%95%B0"><span class="nav-text">1.1 main函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-%E5%87%BD%E6%95%B0%E5%A4%B4"><span class="nav-text">1.1.1 函数头</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-%E5%87%BD%E6%95%B0%E4%BD%93"><span class="nav-text">1.1.2 函数体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-3-main-%E5%87%BD%E6%95%B0%E8%A6%81%E6%B1%82"><span class="nav-text">1.1.3 main()函数要求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E5%90%8D%E7%A7%B0%E7%A9%BA%E9%97%B4"><span class="nav-text">1.2 名称空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E9%87%8D%E8%BD%BD%E8%BF%90%E7%AE%97%E7%AC%A6%E7%AD%89"><span class="nav-text">1.3 重载运算符等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E4%BD%BF%E7%94%A8Vscode%E4%B9%A6%E5%86%99C-%E7%A8%8B%E5%BA%8F"><span class="nav-text">1.4 使用Vscode书写C++程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-C-%E8%AF%AD%E5%8F%A5"><span class="nav-text">2. C++语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E8%AF%AD%E5%8F%A5"><span class="nav-text">2.1 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%87%BD%E6%95%B0"><span class="nav-text">2.2 函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%96%91%E9%97%AE%E8%AE%B0%E5%BD%95%E5%8F%8A%E5%9B%9E%E7%AD%94"><span class="nav-text">疑问记录及回答</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>
