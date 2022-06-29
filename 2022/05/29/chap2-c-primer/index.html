@@ -9,7 +9,7 @@
     
     <title>
         
-            chap2 c++ primer |
+            chap2 C++程序框架说明 |
         
         Naniko
     </title>
@@ -152,7 +152,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">chap2 c++ primer</span>
+            <span class="title-hover-animation">chap2 C++程序框架说明</span>
         </div>
 
         
@@ -200,12 +200,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>1.6k Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>6 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>7 Mins</span>
         </span>
     
     
@@ -222,6 +222,11 @@
 
         <div class="article-content markdown-body">
             <p><strong>最重要的部分为每章后的总结，需要仔细查阅</strong></p>
+<p>本章内容：</p>
+<ul>
+<li>一个C++程序的必要部分解释：例如编译指令、头文件等</li>
+<li>C++语句介绍及函数介绍</li>
+</ul>
 <h2 id="1-C-程序各部分说明"><a href="#1-C-程序各部分说明" class="headerlink" title="1. C++程序各部分说明"></a>1. C++程序各部分说明</h2><ul>
 <li><p>注释： &#x2F;&#x2F;</p>
 </li>
@@ -408,6 +413,17 @@
 <p>答：</p>
 </li>
 <li><p>char类型可以存储什么？</p>
+<p>答：char类型占用1个字节（8位），可以存储字符和小整数。参照：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33620484/article/details/88046083?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-88046083-blog-119376312.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-88046083-blog-119376312.pc_relevant_paycolumn_v3&utm_relevant_index=2" >(54条消息) 贝贝有疑：char为什么能存两个字节，却只能存一个字符？_HappyMouse丨贝贝的博客-CSDN博客_char为什么占两个字节<i class="fas fa-external-link-alt"></i></a></p>
+<p>但是这篇博客里面说的是占用2个字节，使用sizeof(char)输出看到为1个字节。参考：</p>
+<p>[谁跟我说说在C，C++，JAVA中int,char,各占几个字节好么_百度知道 (baidu.com)](<a class="link"   target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/405477895.html#:~:text=C%2FC%2B%2B%EF%BC%8Cchar%E6%98%AF%E5%8D%95%E5%AD%97%E7%AC%A6%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%8C%E5%8F%AA%E5%8D%A01%E4%B8%AA%E5%AD%97%E8%8A%82%E3%80%82" >https://zhidao.baidu.com/question/405477895.html#:~:text=C%2FC%2B%2B，char是单字符数据类型，只占1个字节。<i class="fas fa-external-link-alt"></i></a> Java中，内码（运行内存）的char使用UTF16的方式编码，一个char占用两个字节，但是某些字符需要两个char来表示。,所以，一个字符会占用2个或4个字节。 Java中，外码中char使用UTF8的方式编码，一个字符占用1～6个字节。)</p>
+<ul>
+<li><p>既然有8位，那为什么不能存储125这样的数字呢？</p>
+<p>解释：char类型存储的是字符，一个字符就占用2个字节。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> a = <span class="string">&#x27;125&#x27;</span>;</span><br><span class="line"><span class="comment">//对以上语句来说，1、2、5都分别为一个字符，共三个字符</span></span><br><span class="line"><span class="comment">//尝试输出a</span></span><br><span class="line">cout &lt;&lt; a;</span><br><span class="line"><span class="comment">// 输出结果为5，只会输出最后那个字符</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>举例说明？</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> a = <span class="string">&#x27;65&#x27;</span>;</span><br><span class="line"><span class="comment">//输出为A，为65对应的ASCII码</span></span><br><span class="line"><span class="type">char</span> b = <span class="number">65</span>;</span><br><span class="line"><span class="comment">//超限，输出为最后一个字符5</span></span><br></pre></td></tr></table></figure></li>
+</ul>
 </li>
 </ol>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
@@ -442,6 +458,21 @@
         
             <div class="article-nav">
                 
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%86%B3%E7%AD%96%E6%A0%91/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">机器学习之决策树</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next">
                         <a class="next"
@@ -449,7 +480,7 @@
                            href="/2022/05/29/chap1-c-primer/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">chap1 c++ primer</span>
+                                <span class="post-nav-title-item">chap1 C++简介</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
