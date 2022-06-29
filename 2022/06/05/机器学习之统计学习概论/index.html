@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Naniko">
+    
+    <title>
+        
+            机器学习之统计学习概论 |
+        
+        Naniko
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo7.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/me1.svg","favicon":"/images/logo7.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"三件必要的事情：赚钱，爱自己爱朋友，搞到像齐司礼一样的小狐狸。以及我要和崔金晶长长久久。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Naniko
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">机器学习之统计学习概论</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/me1.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Naniko</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-06-05 19:30:45</span>
+        <span class="mobile">2022-06-05 19:30</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%AE%BA/">统计学习概论</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.8k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>10 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>博客内容 ：本文主要是对李航老师的《统计学习方法》的第一章的总结归纳。</p>
+<p>学习资料和参考资料索引：</p>
+<p>刘建平老师博客：</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/pinard/category/894692.html?page=4" >0081. 机器学习 - 随笔分类(第4页) - 刘建平Pinard - 博客园 (cnblogs.com)<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/pinard/category/894692.html?page=4" >0081. 机器学习 - 随笔分类(第4页) - 刘建平Pinard - 博客园 (cnblogs.com)<i class="fas fa-external-link-alt"></i></a></p>
+<p>一个库：</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/hangtwenty/dive-into-machine-learning" >hangtwenty&#x2F;dive-into-machine-learning: Free ways to dive into machine learning with Python and Jupyter Notebook. Notebooks, courses, and other links. (First posted in 2016.) (github.com)<i class="fas fa-external-link-alt"></i></a></p>
+<p>李航老师书本答案：</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41626059/article/details/116862014" >(58条消息) 李航老师统计学习方法答案汇总_六七～的博客-CSDN博客_统计学习方法答案<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="1、统计学习"><a href="#1、统计学习" class="headerlink" title="1、统计学习"></a>1、统计学习</h2><h3 id="1-1-统计学习简述"><a href="#1-1-统计学习简述" class="headerlink" title="1.1 统计学习简述"></a>1.1 统计学习简述</h3><ul>
+<li>基于<strong>数据</strong>构建<strong>模型</strong>，使用<strong>模型</strong>预测数据。</li>
+<li>统计学习也成为<strong>统计机器学习</strong>。</li>
+<li>研究对象：数据。获取数据的特征，抽取数据的模型，回归数据的分析与预测。</li>
+<li>方法<ul>
+<li>监督学习</li>
+<li>无监督学习</li>
+<li>强化学习</li>
+</ul>
+</li>
+<li>三要素<ul>
+<li>模型：模型的假设空间（某个函数的集合）</li>
+<li>策略：模型的评价准则，用于选出最优模型</li>
+<li>算法：选出最优模型</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-统计学习分类"><a href="#1-2-统计学习分类" class="headerlink" title="1.2 统计学习分类"></a>1.2 统计学习分类</h3><h4 id="1-2-1-基本分类"><a href="#1-2-1-基本分类" class="headerlink" title="1.2.1 基本分类"></a>1.2.1 基本分类</h4><h5 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a><strong>监督学习</strong></h5><ul>
+<li>本质：学习输入到输出的映射的统计规律</li>
+<li>基础知识<ul>
+<li>三个空间<ul>
+<li>输入空间</li>
+<li>输出空间：可以看作特征空间</li>
+<li>特征空间：具体的输入是一个实例，由特征向量表示，特征向量存在的空间称为特征空间</li>
+</ul>
+</li>
+<li>模型假设：输入数据与输出数据遵循联合概率分布。训练数据与测试数据被看作都是依照联合概率分布独立同分布产生的。</li>
+<li>假设空间：输入空间到输出空间的映射的集合</li>
+<li>可以是概率模型或者非概率模型<ul>
+<li>P（y|x）</li>
+<li>y &#x3D; f(x)</li>
+</ul>
+</li>
+<li>可用场景<ul>
+<li>回归</li>
+<li>分类</li>
+<li>标注</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h5><ul>
+<li>描述：从无标注数据中学习预测模型的机器学习问题。</li>
+<li>训练模型：X是输入空间，Z是隐式结构空间<ul>
+<li>z &#x3D; g(x)</li>
+<li>P(x|z)</li>
+<li>P(z|x)</li>
+</ul>
+</li>
+<li>可用场景<ul>
+<li>聚类</li>
+<li>降维</li>
+<li>概率估计</li>
+</ul>
+</li>
+</ul>
+<h5 id="强化学习"><a href="#强化学习" class="headerlink" title="强化学习"></a>强化学习</h5><ul>
+<li><p>本质：学习最优的<strong>序贯决策</strong></p>
+</li>
+<li><p>过程：</p>
+<ul>
+<li>系统从环境中观察到一个<strong>状态s</strong>和一个<strong>奖励r</strong></li>
+<li>系统根据s和r采取一个<strong>动作a</strong></li>
+<li>环境根据系统选择的动作决定<strong>下一步的状态</strong>和<strong>下一步的奖励</strong></li>
+</ul>
+</li>
+<li><p>相关参数：</p>
+<ul>
+<li>五元组&lt;S,A,P,r,y&gt;——用于确定状态和奖励<ul>
+<li>S：状态。下一个状态只依赖于前一个状态和动作。</li>
+<li>A：动作。</li>
+<li>P：状态转移概率函数：由动作和状态预测下一个状态。</li>
+<li>r：奖励函数。下一个奖励只依赖前一个状态和动作。</li>
+<li>y：衰减系数</li>
+</ul>
+</li>
+<li>策略Π——用于确定动作<ul>
+<li>给定状态下动作的函数 a &#x3D; f(s)或者 P（a|s）。给定策略后，出现一个状态就能确定一个动作，即确定了系统与环境的互动行为。</li>
+</ul>
+</li>
+<li>价值函数&#x2F;状态价值函数<ul>
+<li>定义：策略Π从某一个状态s开始的长期累积奖励的数学期望</li>
+<li>关键：<ul>
+<li>条件：状态s &#x3D; s<del>t</del></li>
+<li>奖励从r<del>t+1</del>开始计算</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>动作价值函数<ul>
+<li>定义：策略Π从某一个状态s和动作a开始长期累积奖励的数学期望</li>
+<li>关键：<ul>
+<li>条件：状态s &#x3D; s<del>t</del> ，动作a &#x3D; a<del>t</del></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>学习目标：</p>
+<ul>
+<li>在所有可能的策略中选出价值函数最大的策略Π^*^</li>
+</ul>
+</li>
+<li><p>方法：</p>
+<ul>
+<li>无模型方法：不直接学习模型<ul>
+<li>基于策略：试图求解最优策略</li>
+<li>基于价值：试图求解最优价值函数，间接学到最优策略</li>
+</ul>
+</li>
+<li>有模型方法<ul>
+<li>直接学习马尔可夫决策过程的模型：状态转移概率函数P与奖励函数r</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>【Notes】</p>
+<ul>
+<li>学习中往往从具体的策略出发，不断优化已有策略。</li>
+</ul>
+<h5 id="半监督学习与主动学习"><a href="#半监督学习与主动学习" class="headerlink" title="半监督学习与主动学习"></a><strong>半监督学习与主动学习</strong></h5><p>半监督学习：</p>
+<ul>
+<li>少量标注数据和大量未标注数据</li>
+</ul>
+<p>主动学习：</p>
+<ul>
+<li>机器给出示例让教师标注，根据标注数据学习预测模型</li>
+<li>目标：找出对学习最有帮助的示例让教师标注，减小标注的代价。</li>
+</ul>
+<p>【Notes】</p>
+<ul>
+<li>监督学习是基于已经给定的标注数据，是随机的，而不是特定的选择的标注数据，可以看作是”被动学习“</li>
+</ul>
+<h4 id="1-2-2-按模型分类"><a href="#1-2-2-按模型分类" class="headerlink" title="1.2.2 按模型分类"></a>1.2.2 按模型分类</h4><h5 id="概率模型与非概率模型"><a href="#概率模型与非概率模型" class="headerlink" title="概率模型与非概率模型"></a>概率模型与非概率模型</h5><p>监督学习</p>
+<ul>
+<li><p>概率模型：P（y|x）</p>
+<ul>
+<li>属于生成模型</li>
+</ul>
+</li>
+<li><p>非概率模型：y &#x3D; f(x)</p>
+<ul>
+<li>属于判别模型</li>
+</ul>
+</li>
+</ul>
+<p>无监督学习</p>
+<ul>
+<li>概率模型：P（z|x）或者P（x|z）</li>
+<li>非概率模型：z &#x3D; g(x)</li>
+</ul>
+<p>概率模型举例：决策树、朴素贝叶斯、隐马尔可夫模型、条件随机场、概率潜在语义分析、潜在狄利克雷分配、高斯混合模型</p>
+<p>非概率模型举例：感知机、支持向量机、k近邻、AdaBoost、k均值、潜在语义分析、神经网络</p>
+<p>【Notes】</p>
+<ol>
+<li>P(y|x)和y &#x3D; f(x)可以相互转化。条件概率分布最大化后得到函数，函数归一化后得到条件概率分布。</li>
+<li>概率模型和非概率模型区别<strong>不在于映射关系</strong>，在于模型的内在结构。<ul>
+<li><strong>概率模型一定可以表示为联合概率分布的形式，非概率模型不一定存在这样的联合概率分布</strong></li>
+</ul>
+</li>
+<li>概率模型代表：概率图模型。联合概率分布可以根据图的结构分解为因子乘积形式。</li>
+</ol>
+<h5 id="线性模型与非线性模型"><a href="#线性模型与非线性模型" class="headerlink" title="线性模型与非线性模型"></a>线性模型与非线性模型</h5><ul>
+<li>非概率模型可以分为线性模型和非线性模型。如果y &#x3D; f(x)是线性函数，就是线性模型。</li>
+</ul>
+<p>线性模型举例：感知机、线性支持向量机、k近邻、k均值、潜在语义分析</p>
+<p>非线性模型举例：核函数支持向量机、AdaBoost、神经网络</p>
+<h5 id="参数化模型与非参数化模型"><a href="#参数化模型与非参数化模型" class="headerlink" title="参数化模型与非参数化模型"></a>参数化模型与非参数化模型</h5><ul>
+<li>参数化模型：模型参数的维度固定</li>
+<li>非参数化模型：参数维度不固定或者无穷大，随着训练数据量增多而增大</li>
+</ul>
+<h4 id="1-2-3-按算法分类"><a href="#1-2-3-按算法分类" class="headerlink" title="1.2.3 按算法分类"></a>1.2.3 按算法分类</h4><h5 id="在线学习"><a href="#在线学习" class="headerlink" title="在线学习"></a>在线学习</h5><ul>
+<li>每次接受<strong>一个样本</strong>，进行预测，学习模型，不断重复操作</li>
+<li>既可以是无监督学习也可以是监督学习，强化学习本身就是一种在线学习</li>
+<li>通常模型准确率低于批量学习，因为每次可以利用的数据有限。优点在于可以快速适应新的模式（此时就不满足独立同分布假设了）</li>
+</ul>
+<h5 id="批量学习"><a href="#批量学习" class="headerlink" title="批量学习"></a>批量学习</h5><ul>
+<li>一些接受<strong>所有数据</strong>，学习模型，进行预测</li>
+</ul>
+<h4 id="1-2-4-按技巧分类"><a href="#1-2-4-按技巧分类" class="headerlink" title="1.2.4 按技巧分类"></a>1.2.4 按技巧分类</h4><h5 id="贝叶斯学习"><a href="#贝叶斯学习" class="headerlink" title="贝叶斯学习"></a>贝叶斯学习</h5><h5 id="核方法"><a href="#核方法" class="headerlink" title="核方法"></a>核方法</h5><h3 id="1-3-统计学习方法三要素"><a href="#1-3-统计学习方法三要素" class="headerlink" title="1.3 统计学习方法三要素"></a>1.3 统计学习方法三要素</h3><p>方法 &#x3D; 模型 + 策略 + 算法</p>
+<h4 id="模型"><a href="#模型" class="headerlink" title="模型"></a><strong>模型</strong></h4><ul>
+<li>模型：所要学习的条件概率分布或者决策函数<ul>
+<li>假设空间里包含所有可能的条件概率分布或者决策函数</li>
+<li>假设空间为决策函数的集合</li>
+</ul>
+</li>
+</ul>
+<h4 id="策略"><a href="#策略" class="headerlink" title="策略"></a>策略</h4><h5 id="一些名词概念"><a href="#一些名词概念" class="headerlink" title="一些名词概念"></a>一些名词概念</h5><ul>
+<li>损失函数<ul>
+<li>用于度量模型<strong>一次预测</strong>的好坏，用于度量预测错误的程度，是f(x)和Y的非负实值函数，L（Y，f(X)）</li>
+<li>常用损失函数<ul>
+<li>0-1损失函数</li>
+<li>平方损失函数</li>
+<li>绝对损失函数</li>
+<li>对数损失函数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>风险函数（期望损失）<ul>
+<li>损失函数的期望</li>
+<li>又要最小化期望损失，联合分布概率又未知，又要学习联合分布概率——&gt;监督学习变成病态问题</li>
+</ul>
+</li>
+<li>经验风险（经验损失）<ul>
+<li>模型关于训练样本集的平均损失。只要样本足够多，就可以用经验风险去估计期望损失。</li>
+</ul>
+</li>
+</ul>
+<h5 id="经验风险最小化与结构风险最小化"><a href="#经验风险最小化与结构风险最小化" class="headerlink" title="经验风险最小化与结构风险最小化"></a>经验风险最小化与结构风险最小化</h5><ul>
+<li>什么是经验风险最小化？有什么作用？有什么注意事项？<ul>
+<li>经验风险最小化是指是的经验风险或损失达到最小以此保证获得最优模型。</li>
+<li>作用：当样本足够大时，可以保证很好的学习效果。<ul>
+<li>极大似然估计就是经验风险最小化的例子。</li>
+</ul>
+</li>
+<li>注意：当样本容量小时，会产生”过拟合“现象。</li>
+</ul>
+</li>
+<li>什么是结构风险最小化？有什么作用？<ul>
+<li>为了防止过拟合提出来的策略。</li>
+<li>结构风险最小化等价于正则化。</li>
+<li>结构风险在经验风险上加上表示模型复杂度的正则化项或者罚项。</li>
+</ul>
+</li>
+</ul>
+<p>【Notes】</p>
+<ol>
+<li>泛函：任意的向量空间到标量的映射。也就是从函数空间到数域的映射。</li>
+</ol>
+<h3 id="1-4-模型评估与模型选择"><a href="#1-4-模型评估与模型选择" class="headerlink" title="1.4 模型评估与模型选择"></a>1.4 模型评估与模型选择</h3><p><strong>概念</strong></p>
+<ol>
+<li>训练误差与测试误差<ul>
+<li>测试误差具有更好的预测能力</li>
+</ul>
+</li>
+<li>过拟合与模型选择<ul>
+<li>过拟合：学习选择的模型所包含参数过多，已知数据上预测效果好，但是未知数据上预测很差。</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-5-正则化与交叉验证"><a href="#1-5-正则化与交叉验证" class="headerlink" title="1.5 正则化与交叉验证"></a>1.5 正则化与交叉验证</h3><h4 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h4><ul>
+<li>作用：选择经验风险和结构风险同时较小的模型。保证预测准确的同时模型最简单。</li>
+</ul>
+<h4 id="交叉验证"><a href="#交叉验证" class="headerlink" title="交叉验证"></a>交叉验证</h4><ul>
+<li>简单交叉验证</li>
+<li>S折交叉验证</li>
+<li>留一交叉验证</li>
+</ul>
+<h3 id="1-6-泛化能力"><a href="#1-6-泛化能力" class="headerlink" title="1.6 泛化能力"></a>1.6 泛化能力</h3><ul>
+<li>泛化能力：对未知数据的预测能力</li>
+<li>泛化误差上限<ul>
+<li>含义</li>
+<li>证明</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-7-生成模型与判别模型"><a href="#1-7-生成模型与判别模型" class="headerlink" title="1.7 生成模型与判别模型"></a>1.7 生成模型与判别模型</h3><p><strong>生成模型</strong>：学习联合概率分布P（X,Y）</p>
+<p>优势：</p>
+<ul>
+<li>可以还原出联合概率分布</li>
+<li>收敛速度更快</li>
+<li>存在隐变量时，仍然可以用生成方法学习</li>
+</ul>
+<p><strong>判别模型</strong>：直接学习决策函数或者条件概率分布</p>
+<p>优势：</p>
+<ul>
+<li>学习的准确率更高</li>
+<li>方便对数据进行各种程度上的抽象、定义特征并使用特征，可以简化学习问题</li>
+</ul>
+<h3 id="1-8-监督学习应用"><a href="#1-8-监督学习应用" class="headerlink" title="1.8 监督学习应用"></a>1.8 监督学习应用</h3><h4 id="1-8-1-分类问题"><a href="#1-8-1-分类问题" class="headerlink" title="1.8.1 分类问题"></a>1.8.1 分类问题</h4><ul>
+<li><p>分类问题包括学习和分类两个过程。</p>
+<ul>
+<li>X可以是离散的也可以是连续的</li>
+<li>Y取有限个离散值</li>
+</ul>
+</li>
+<li><p>分类性能指标：分类准确率。</p>
+</li>
+<li><p>二分类问题常用评价指标：</p>
+<ul>
+<li><p>精确率P</p>
+</li>
+<li><p>召回率R</p>
+</li>
+<li><p>F1 score： 2&#x2F;F &#x3D; 1&#x2F;P + 1&#x2F;R</p>
+<p>【Notes】：当精确率和召回率都高时，F1也会高</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-8-2-标注问题"><a href="#1-8-2-标注问题" class="headerlink" title="1.8.2 标注问题"></a>1.8.2 标注问题</h4><ul>
+<li>标注问题是分类问题的推广。<ul>
+<li>输入：一个观测序列</li>
+<li>输出：一个标记序列或者状态序列</li>
+<li>过程：学习和标注两个过程</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-8-3-回归问题"><a href="#1-8-3-回归问题" class="headerlink" title="1.8.3 回归问题"></a>1.8.3 回归问题</h4><ul>
+<li>回归问题的学习等价于函数拟合</li>
+<li>常用损失函数：平方损失函数<ul>
+<li>使用平方损失函数时，可以用最小二乘法求解</li>
+</ul>
+</li>
+</ul>
+<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ol>
+<li>推导经验风险最小化与极大似然估计的关系。日常应用模型需要满足的条件是什么？</li>
+<li>推导贝叶斯估计和结构风险最小化的关系</li>
+<li>泛化误差怎么理解？泛化误差上界有什么应用？怎么证明的？</li>
+</ol>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2>
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">#机器学习</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%AE%BA/">#统计学习概论</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%84%9F%E7%9F%A5%E6%9C%BA/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">机器学习之感知机</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/06/04/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%8D%E4%B9%A0/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">概率论基础知识复习</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Naniko</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0"><span class="nav-text">1、统计学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%BF%B0"><span class="nav-text">1.1 统计学习简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB"><span class="nav-text">1.2 统计学习分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-%E5%9F%BA%E6%9C%AC%E5%88%86%E7%B1%BB"><span class="nav-text">1.2.1 基本分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="nav-text">监督学习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="nav-text">无监督学习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="nav-text">强化学习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%B8%BB%E5%8A%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">半监督学习与主动学习</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-%E6%8C%89%E6%A8%A1%E5%9E%8B%E5%88%86%E7%B1%BB"><span class="nav-text">1.2.2 按模型分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B%E4%B8%8E%E9%9D%9E%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B"><span class="nav-text">概率模型与非概率模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E4%B8%8E%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B"><span class="nav-text">线性模型与非线性模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E5%8C%96%E6%A8%A1%E5%9E%8B%E4%B8%8E%E9%9D%9E%E5%8F%82%E6%95%B0%E5%8C%96%E6%A8%A1%E5%9E%8B"><span class="nav-text">参数化模型与非参数化模型</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-%E6%8C%89%E7%AE%97%E6%B3%95%E5%88%86%E7%B1%BB"><span class="nav-text">1.2.3 按算法分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0"><span class="nav-text">在线学习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E5%AD%A6%E4%B9%A0"><span class="nav-text">批量学习</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-4-%E6%8C%89%E6%8A%80%E5%B7%A7%E5%88%86%E7%B1%BB"><span class="nav-text">1.2.4 按技巧分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AD%A6%E4%B9%A0"><span class="nav-text">贝叶斯学习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A0%B8%E6%96%B9%E6%B3%95"><span class="nav-text">核方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="nav-text">1.3 统计学习方法三要素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-text">模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%96%E7%95%A5"><span class="nav-text">策略</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%90%8D%E8%AF%8D%E6%A6%82%E5%BF%B5"><span class="nav-text">一些名词概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%8F%E9%AA%8C%E9%A3%8E%E9%99%A9%E6%9C%80%E5%B0%8F%E5%8C%96%E4%B8%8E%E7%BB%93%E6%9E%84%E9%A3%8E%E9%99%A9%E6%9C%80%E5%B0%8F%E5%8C%96"><span class="nav-text">经验风险最小化与结构风险最小化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9"><span class="nav-text">1.4 模型评估与模型选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-%E6%AD%A3%E5%88%99%E5%8C%96%E4%B8%8E%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81"><span class="nav-text">1.5 正则化与交叉验证</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-text">正则化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81"><span class="nav-text">交叉验证</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-%E6%B3%9B%E5%8C%96%E8%83%BD%E5%8A%9B"><span class="nav-text">1.6 泛化能力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%88%A4%E5%88%AB%E6%A8%A1%E5%9E%8B"><span class="nav-text">1.7 生成模型与判别模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E5%BA%94%E7%94%A8"><span class="nav-text">1.8 监督学习应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-1-%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="nav-text">1.8.1 分类问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-2-%E6%A0%87%E6%B3%A8%E9%97%AE%E9%A2%98"><span class="nav-text">1.8.2 标注问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-3-%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98"><span class="nav-text">1.8.3 回归问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%96%91%E9%97%AE"><span class="nav-text">疑问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98"><span class="nav-text">习题</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>
